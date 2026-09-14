@@ -3469,12 +3469,18 @@ lbl_ad_block: "مسدودسازی تبلیغات اینترنتی",
                       u.userPorts = filtered.length ? filtered.join(',') : globalPorts[0];
                           return u;
                           });
-              const stat = el('save-status'); stat.textContent = i18n[lang].msg_saving; stat.className = "text-sm font-bold text-primary animate-pulse md:me-4";
-              try {
+              const stat = el('save-status');
+              if (stat) {
+                  stat.textContent = i18n[lang].msg_saving;
+                  stat.className = "text-sm font-bold text-primary animate-pulse md:me-4";
+              }              try {
                   const res = await fetch(baseRoute + '/api/sync', { method: 'POST', body: JSON.stringify(payload) });
                   const data = await res.json();
-                  if (data.success) {
-                      stat.textContent = i18n[lang].msg_saved; stat.className = "text-sm font-bold text-emerald-500 md:me-4";
+                                    if (data.success) {
+                      if (stat) {
+                          stat.textContent = i18n[lang].msg_saved;
+                          stat.className = "text-sm font-bold text-emerald-500 md:me-4";
+                      }
                       if (Array.isArray(window.nahanConfig?.linkedPanels) && window.nahanConfig.linkedPanels.length > 0) {
                           const sc = payload.config;
                           const slaveCfg = { ...sc };
@@ -3506,10 +3512,19 @@ lbl_ad_block: "مسدودسازی تبلیغات اینترنتی",
                           // Same route — just refresh data silently, no reload
                           baseRoute = '/' + (newApiRoute || prevApiRoute);
                           doLogin(true);
-                          setTimeout(() => { stat.textContent = ''; }, 2500);
+                      setTimeout(() => { if (stat) stat.textContent = ''; }, 2500);                      }
+                                    } else {
+                      if (stat) {
+                          stat.textContent = i18n[lang].msg_err;
+                          stat.className = "text-sm font-bold text-red-500 md:me-4";
                       }
-                  } else { stat.textContent = i18n[lang].msg_err; stat.className = "text-sm font-bold text-red-500 md:me-4"; }
-              } catch(e) { stat.textContent = i18n[lang].msg_err; stat.className = "text-sm font-bold text-red-500 md:me-4"; }
+                  }
+              } catch(e) {
+                  if (stat) {
+                      stat.textContent = i18n[lang].msg_err;
+                      stat.className = "text-sm font-bold text-red-500 md:me-4";
+                  }
+              }
           }
 
           document.getElementById('pwd').addEventListener('keypress', e => { if (e.key === 'Enter') doLogin(); });
