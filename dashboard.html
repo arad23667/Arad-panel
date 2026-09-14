@@ -4986,6 +4986,26 @@ function buildPortCheckboxes(wrapId, selectedPorts) {
           });
       }
   });
+              // ===== Attach Dirty Listeners for Global Save Bar =====
+  document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('dash-box');
+      if (container) {
+          container.addEventListener('input', (e) => {
+              const t = e.target;
+              if (!t) return;
+              if (t.closest('#view-settings') || t.closest('#view-advanced') || t.closest('#view-info')) {
+                  markDirty();
+              }
+          }, true);
+          container.addEventListener('change', (e) => {
+              const t = e.target;
+              if (!t) return;
+              if (t.closest('#view-settings') || t.closest('#view-advanced') || t.closest('#view-info')) {
+                  markDirty();
+              }
+          }, true);
+      }
+  });
 </script>
                         <div id="global-save-bar" class="global-save-bar">
     <span style="font-size:13px;font-weight:600;color:var(--color-text-muted);">تغییرات ذخیره نشده</span>
