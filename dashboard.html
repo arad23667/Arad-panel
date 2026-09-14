@@ -2771,27 +2771,7 @@ lbl_ad_block: "مسدودسازی تبلیغات اینترنتی",
                     document.getElementById('ov-today-traffic').textContent = s.traffic.dailyGB + ' ' + (i18n[lang]?.ov_gb_unit || 'GB');
                     document.getElementById('ov-today-reqs').textContent = s.traffic.dailyRequests.toLocaleString();
                     document.getElementById('ov-active-conns').textContent = s.system.activeConnections;
-                    // Per-user active connections
-const activeConnsContainer = document.getElementById('ov-active-conns-detail');
-if (activeConnsContainer && s.system.activeConnsPerUser) {
-    let connsHtml = '';
-    const entries = Object.entries(s.system.activeConnsPerUser).filter(([k, v]) => v > 0);
-    if (entries.length === 0) {
-        connsHtml = '<p class="text-xs text-slate-400 text-center py-2">' + (i18n[lang]?.no_active_conn || 'No active connections') + '</p>';
-    } else {
-        entries.forEach(([uuid, count]) => {
-            const user = (window.nahanConfig?.users || []).find(u => 
-                u.id.replace(/-/g, '').toLowerCase() === uuid
-            );
-            const name = user ? user.name : uuid.substring(0, 8);
-            connsHtml += '<div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-50 dark:bg-slate-800/50">' +
-                '<span class="text-xs font-bold text-slate-700 dark:text-slate-200">' + name + '</span>' +
-                '<span class="text-xs font-mono text-emerald-500 font-bold">' + count + '</span>' +
-            '</div>';
-        });
-    }
-    activeConnsContainer.innerHTML = connsHtml;
-}
+                    
                                         // Per-user active connections
                     const activeConnsContainer = document.getElementById('ov-active-conns-detail');
                     if (activeConnsContainer && s.system.activeConnsPerUser) {
