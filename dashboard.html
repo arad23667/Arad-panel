@@ -366,7 +366,7 @@ html.dark select option {
                       <span id="app-version" class="text-[10px] font-mono text-slate-400 mt-1 font-semibold">v__CURRENT_VERSION__</span>
                   </div>
               </div>
-                           <nav class="flex-1 p-4 space-y-2 overflow-y-auto">
+              <nav class="flex-1 p-4 space-y-2 overflow-y-auto">
                   <button onclick="switchTab('overview')" id="tab-overview" class="nav-item active flex items-center w-full px-4 py-3 rounded-lg text-slate-500 hover:text-slate-800 dark:hover:text-white group">
                       <svg class="w-6 h-6 me-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                       <span class="font-semibold" data-i18n="tab_overview">Dashboard</span>
@@ -390,10 +390,6 @@ html.dark select option {
                   <button onclick="switchTab('logs')" id="tab-logs" class="nav-item flex items-center w-full px-4 py-3 rounded-lg text-slate-500 hover:text-slate-800 dark:hover:text-white group">
                       <svg class="w-6 h-6 me-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                       <span class="font-semibold" data-i18n="tab_logs">Logs</span>
-                  </button>
-                  <button onclick="switchTab('conn-logs')" id="tab-conn-logs" class="nav-item flex items-center w-full px-4 py-3 rounded-lg text-slate-500 hover:text-slate-800 dark:hover:text-white group">
-                      <svg class="w-6 h-6 me-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                      <span class="font-semibold" data-i18n="tab_conn_logs">Connection Logs</span>
                   </button>
                   <button onclick="switchTab('users')" id="tab-users" class="nav-item flex items-center w-full px-4 py-3 rounded-lg text-slate-500 hover:text-slate-800 dark:hover:text-white group">
                       <svg class="w-6 h-6 me-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
@@ -530,18 +526,12 @@ html.dark select option {
                                   <p class="text-[9px] md:text-[10px] text-slate-400 mt-0.5 md:mt-1"><span id="ov-today-reqs">-</span> <span data-i18n="ov_requests">requests</span></p>
                               </div>
                               <div class="native-press bg-[var(--color-surface)]  rounded-xl md:rounded-2xl p-3 md:p-5 shadow-sm border border-slate-200 dark:border-darkborder">
-    <div class="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
-        <div class="p-1.5 md:p-2.5 bg-blue-500/10 text-blue-500 rounded-lg md:rounded-xl"><svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z"></path></svg></div>
-         <span class="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider" data-i18n="ov_active_conns">Active Connections</span>
-    </div>
-    <p id="ov-active-conns" class="text-base md:text-xl font-black text-slate-800 dark:text-white">-</p>
-    <div class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800">
-        <p class="text-[10px] font-bold text-slate-400 uppercase mb-2">Per User</p>
-        <div id="ov-active-conns-detail" class="space-y-1 max-h-32 overflow-y-auto">
-            <p class="text-xs text-slate-400 text-center py-2">-</p>
-        </div>
-    </div>
-</div>
+                                  <div class="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
+                                      <div class="p-1.5 md:p-2.5 bg-blue-500/10 text-blue-500 rounded-lg md:rounded-xl"><svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z"></path></svg></div>
+                                       <span class="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider" data-i18n="ov_active_conns">Active Connections</span>
+                                  </div>
+                                  <p id="ov-active-conns" class="text-base md:text-xl font-black text-slate-800 dark:text-white">-</p>
+                              </div>
                               <div class="native-press bg-[var(--color-surface)]  rounded-xl md:rounded-2xl p-3 md:p-5 shadow-sm border border-slate-200 dark:border-darkborder">
                                   <div class="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
                                       <div class="p-1.5 md:p-2.5 bg-indigo-500/10 text-indigo-500 rounded-lg md:rounded-xl"><svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg></div>
@@ -1001,60 +991,6 @@ proxyip.cmliussss.net" class="w-full px-4 py-3 rounded-xl border border-slate-20
                                   </div>
                               </div>
                           </div>
-                          <!-- Section: Upstream VLESS -->
-                          <div class="bg-[var(--color-surface)]  rounded-2xl border border-slate-200 dark:border-darkborder overflow-hidden" data-accordion="">
-                              <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-5 py-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                                  <div class="flex items-center gap-3">
-                                      <span class="text-lg">🔗</span>
-                                      <span class="text-sm font-bold text-slate-700 dark:text-white" data-i18n="adv_upstream_title">Upstream VLESS</span>
-                                      <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800" data-i18n="adv_upstream_badge">Sing-Box / Clash</span>
-                                  </div>
-                                  <svg class="w-4 h-4 text-slate-400 transform transition-transform duration-200 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                              </button>
-                              <div data-accordion-content="" class="transition-all duration-300" style="max-height:0;overflow:hidden;visibility:hidden">
-                                  <div class="space-y-4 px-5 pb-5 pt-1">
-                                      <!-- Explanation box -->
-                                      <div class="p-4 rounded-xl bg-indigo-50 dark:bg-indigo-950/20 border border-indigo-200 dark:border-indigo-900/30 text-xs text-indigo-700 dark:text-indigo-300 leading-relaxed font-sans space-y-2">
-                                          <p data-i18n="adv_upstream_desc1"><strong>این بخش چیکار میکنه؟</strong><br>یه سرور رایگان VLESS (مثلاً از سایت‌هایی مثل RaceVPN یا SSHMax) به پنل معرفی می‌کنی تا تمام ترافیکت از اون سوراخ رد بشه. یعنی IP خروجیت میشه IP اون سرور.</p>
-                                          <p data-i18n="adv_upstream_desc2"><strong>چرا لازمه؟</strong><br>بعضی وقتا به IP یه کشور خاص (مثلاً آلمان یا آمریکا) نیاز داری ولی نمی‌خوای سرور بخری. با این بخش می‌تونی رایگان از IP اون کشور استفاده کنی.</p>
-                                          <p data-i18n="adv_upstream_desc3"><strong>چطوری استفاده کنم؟</strong><br>۱. از یکی از سایت‌های زیر یه لینک VLESS بگیر<br>۲. لینک رو اینجا paste کن<br>۳. Save کن<br>۴. از لینک سابسکریپشن (فرمت Sing-Box یا Clash) استفاده کن</p>
-                                      </div>
-                                      <div class="space-y-1">
-                                          <label class="block text-sm font-bold text-slate-600 dark:text-slate-300" data-i18n="adv_upstream_label">لینک سرور VLESS</label>
-                                          <textarea id="cfg-upstream" rows="3" placeholder="vless://uuid@server:port?type=ws&amp;security=tls&amp;sni=example.com&amp;path=/ws#Upstream-Name" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-darkborder bg-slate-50 dark:bg-slate-800 focus:border-primary focus:ring-1 outline-none font-mono text-xs resize-none"></textarea>
-                                          <p class="text-xs text-slate-400 mt-1" data-i18n="adv_upstream_hint">لینک VLESS رو از سایت‌های زیر کپی کن و اینجا بذار:</p>
-                                      </div>
-                                      <!-- Free VLESS providers -->
-                                      <div class="space-y-2">
-                                          <p class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider" data-i18n="adv_upstream_providers">سایت‌های دریافت لینک رایگان:</p>
-                                          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                                              <a href="https://sshmax.net" target="_blank" class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-darkborder text-xs text-slate-600 dark:text-slate-300 hover:border-primary transition-colors">
-                                                  <span>🌐</span><span>SSHMax</span>
-                                              </a>
-                                              <a href="https://sshocean.com" target="_blank" class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-darkborder text-xs text-slate-600 dark:text-slate-300 hover:border-primary transition-colors">
-                                                  <span>🌐</span><span>SSHOcean</span>
-                                              </a>
-                                              <a href="https://vpnjantit.com" target="_blank" class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-darkborder text-xs text-slate-600 dark:text-slate-300 hover:border-primary transition-colors">
-                                                  <span>🌐</span><span>VPNJantit</span>
-                                              </a>
-                                              <a href="https://fcbind.com" target="_blank" class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-darkborder text-xs text-slate-600 dark:text-slate-300 hover:border-primary transition-colors">
-                                                  <span>🌐</span><span>FCBind</span>
-                                              </a>
-                                              <a href="https://sslvpn.buzz" target="_blank" class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-darkborder text-xs text-slate-600 dark:text-slate-300 hover:border-primary transition-colors">
-                                                  <span>🌐</span><span>SslVpn</span>
-                                              </a>
-                                              <a href="https://cloudv2ray.com" target="_blank" class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-darkborder text-xs text-slate-600 dark:text-slate-300 hover:border-primary transition-colors">
-                                                  <span>🌐</span><span>CloudV2ray</span>
-                                              </a>
-                                          </div>
-                                      </div>
-                                      <div class="mt-2 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/30 text-xs text-amber-700 dark:text-amber-300 leading-relaxed font-sans flex gap-2">
-                                          <span>⚠️</span>
-                                          <span data-i18n="adv_upstream_warning">کانفیگ‌های رایگان معمولاً چند روز بیشتر دوام ندارن. اگه اتصال قطع شد، لینک جدید بگیر و جایگزین کن. همچنین فقط با فرمت‌های Sing-Box و Clash کار می‌کنه.</span>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
                           <!-- Section: Subscription -->
                           <div class="bg-[var(--color-surface)]  rounded-2xl border border-slate-200 dark:border-darkborder overflow-hidden" data-accordion="">
                               <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-5 py-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
@@ -1396,46 +1332,33 @@ proxyip.cmliussss.net" class="w-full px-4 py-3 rounded-xl border border-slate-20
                                                <input type="number" id="add-user-conn-limit" placeholder="Unlimited" data-i18n-placeholder="unlimited" min="1" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-darkborder bg-slate-50 dark:bg-slate-800 focus:border-primary outline-none text-sm" data-i18n-placeholder="unlimited">
                                                <p class="text-[10px] text-slate-400 mt-1" data-i18n="desc_conn_limit">حداکثر اتصال همزمان از یک IP. خالی = نامحدود.</p>
                                            </div>
+                                           <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+                                               <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-darkborder bg-[var(--color-surface)]">
+                                                   <span><b class="text-xs">شروع اعتبار از اولین اتصال</b><small class="block text-[10px] text-slate-400">اعتبار تا اولین اتصال شروع نمی‌شود</small></span>
+                                                   <input id="add-user-start-on-connect" type="checkbox" class="w-4 h-4">
+                                               </label>
+                                               <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-darkborder bg-[var(--color-surface)]">
+                                                   <span><b class="text-xs">Fingerprint اختصاصی TLS</b><small class="block text-[10px] text-slate-400">خالی = مقدار عمومی پنل</small></span>
+                                                   <select id="add-user-tls-fingerprint" class="w-32 px-2 py-2 rounded-lg border border-slate-200 dark:border-darkborder bg-[var(--color-surface)] text-xs">
+                                                       <option value="">پیش‌فرض پنل</option><option value="chrome">Chrome</option><option value="firefox">Firefox</option><option value="safari">Safari</option><option value="edge">Edge</option><option value="randomized">Randomized</option>
+                                                   </select>
+                                               </label>
+                                               <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-darkborder bg-[var(--color-surface)]">
+                                                   <span><b class="text-xs">مسدودسازی تبلیغات</b><small class="block text-[10px] text-slate-400">DNS Ad-Block برای خروجی‌های پشتیبانی‌شده</small></span>
+                                                   <input id="add-user-block-ads" type="checkbox" class="w-4 h-4">
+                                               </label>
+                                               <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-darkborder bg-[var(--color-surface)]">
+                                                   <span><b class="text-xs">تعویض خودکار IP</b><small class="block text-[10px] text-slate-400">چرخش بین IPهای تعریف‌شده کاربر</small></span>
+                                                   <input id="add-user-auto-ip" type="checkbox" class="w-4 h-4">
+                                               </label>
+                                               <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-darkborder bg-[var(--color-surface)] md:col-span-2">
+                                                   <span><b class="text-xs">Fragment</b><small class="block text-[10px] text-slate-400">فقط در کلاینت‌هایی که از این گزینه پشتیبانی می‌کنند اعمال می‌شود</small></span>
+                                                   <input id="add-user-fragment" type="checkbox" class="w-4 h-4">
+                                               </label>
+                                           </div>
                                        </div>
                                    </div>
                                    <!-- Network (Collapsible) -->
-                                                                       <!-- Start On First Connection + Fingerprint + AdBlock -->
-                                   <div class="bg-amber-50/50 dark:bg-amber-900/10 rounded-2xl border border-amber-200 dark:border-amber-900/30 p-4 space-y-3">
-                                       <label class="flex items-center justify-between cursor-pointer">
-                                           <div>
-                                               <span class="text-sm font-bold text-amber-700 dark:text-amber-400" data-i18n="lbl_start_on_first_conn">شروع محاسبه از اولین اتصال</span>
-                                               <p class="text-[10px] text-amber-500/70 dark:text-amber-400/60 mt-0.5">تاریخ انقضا از اولین اتصال کاربر محاسبه می‌شود</p>
-                                           </div>
-                                           <div class="relative inline-flex items-center cursor-pointer">
-                                               <input type="checkbox" id="add-user-start-on-first-conn" class="sr-only peer">
-                                               <div class="w-11 h-6 bg-slate-300 dark:bg-slate-600 rounded-full peer peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-[var(--color-surface)] after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
-                                           </div>
-                                       </label>
-                                       <div>
-                                           <label class="block text-xs font-bold text-slate-500 mb-1" data-i18n="lbl_user_fingerprint">فینگرپرینت TLS اختصاصی</label>
-                                           <select id="add-user-fingerprint" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-darkborder bg-slate-50 dark:bg-slate-800 focus:border-primary outline-none text-sm">
-                                               <option value="">— پیش‌فرض —</option>
-                                               <option value="chrome">Chrome</option>
-                                               <option value="firefox">Firefox</option>
-                                               <option value="safari">Safari</option>
-                                               <option value="edge">Edge</option>
-                                               <option value="ios">iOS</option>
-                                               <option value="android">Android</option>
-                                               <option value="random">Random</option>
-                                               <option value="randomized">Randomized</option>
-                                           </select>
-                                       </div>
-                                       <label class="flex items-center justify-between cursor-pointer">
-                                           <div>
-                                               <span class="text-sm font-bold text-rose-700 dark:text-rose-400" data-i18n="lbl_ad_block">مسدودسازی تبلیغات اینترنتی</span>
-                                               <p class="text-[10px] text-rose-500/70 dark:text-rose-400/60 mt-0.5">مسدود کردن تبلیغات و تراکرها در کانفیگ کاربر</p>
-                                           </div>
-                                           <div class="relative inline-flex items-center cursor-pointer">
-                                               <input type="checkbox" id="add-user-adblock" class="sr-only peer">
-                                               <div class="w-11 h-6 bg-slate-300 dark:bg-slate-600 rounded-full peer peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-[var(--color-surface)] after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-rose-500"></div>
-                                           </div>
-                                       </label>
-                                   </div>
                                    <div class="bg-slate-50/50 dark:bg-slate-800/30 rounded-2xl border border-slate-100 dark:border-slate-700/50 overflow-hidden">
                                        <button onclick="toggleAddUserSection('network')" class="w-full flex items-center justify-between p-4 hover:bg-slate-100/50 dark:hover:bg-slate-700/30 transition-colors">
                                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
@@ -1588,41 +1511,6 @@ proxyip.cmliussss.net" class="w-full px-4 py-3 rounded-xl border border-slate-20
                                       </div>
                                   </div>
                                    <!-- Network (Collapsible) -->
-                                                                       <!-- Start On First Connection + Fingerprint + AdBlock -->
-                                   <div class="bg-amber-50/50 dark:bg-amber-900/10 rounded-2xl border border-amber-200 dark:border-amber-900/30 p-4 space-y-3">
-                                       <label class="flex items-center justify-between cursor-pointer">
-                                           <div>
-                                               <span class="text-sm font-bold text-amber-700 dark:text-amber-400" data-i18n="lbl_start_on_first_conn">شروع محاسبه از اولین اتصال</span>
-                                           </div>
-                                           <div class="relative inline-flex items-center cursor-pointer">
-                                               <input type="checkbox" id="edit-user-start-on-first-conn" class="sr-only peer">
-                                               <div class="w-11 h-6 bg-slate-300 dark:bg-slate-600 rounded-full peer peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-[var(--color-surface)] after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
-                                           </div>
-                                       </label>
-                                       <div>
-                                           <label class="block text-xs font-bold text-slate-500 mb-1" data-i18n="lbl_user_fingerprint">فینگرپرینت TLS اختصاصی</label>
-                                           <select id="edit-user-fingerprint" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-darkborder bg-slate-50 dark:bg-slate-800 focus:border-primary outline-none text-sm">
-                                               <option value="">— پیش‌فرض —</option>
-                                               <option value="chrome">Chrome</option>
-                                               <option value="firefox">Firefox</option>
-                                               <option value="safari">Safari</option>
-                                               <option value="edge">Edge</option>
-                                               <option value="ios">iOS</option>
-                                               <option value="android">Android</option>
-                                               <option value="random">Random</option>
-                                               <option value="randomized">Randomized</option>
-                                           </select>
-                                       </div>
-                                       <label class="flex items-center justify-between cursor-pointer">
-                                           <div>
-                                               <span class="text-sm font-bold text-rose-700 dark:text-rose-400" data-i18n="lbl_ad_block">مسدودسازی تبلیغات اینترنتی</span>
-                                           </div>
-                                           <div class="relative inline-flex items-center cursor-pointer">
-                                               <input type="checkbox" id="edit-user-adblock" class="sr-only peer">
-                                               <div class="w-11 h-6 bg-slate-300 dark:bg-slate-600 rounded-full peer peer-checked:after:translate-x-5 rtl:peer-checked:after:-translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-[var(--color-surface)] after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-rose-500"></div>
-                                           </div>
-                                       </label>
-                                   </div>
                                    <div class="bg-slate-50/50 dark:bg-slate-800/30 rounded-2xl border border-slate-100 dark:border-slate-700/50 overflow-hidden">
                                        <button onclick="toggleEditUserSection('network')" class="w-full flex items-center justify-between p-4 hover:bg-slate-100/50 dark:hover:bg-slate-700/30 transition-colors">
                                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
@@ -1730,24 +1618,84 @@ proxyip.cmliussss.net" class="w-full px-4 py-3 rounded-xl border border-slate-20
                               <div class="space-y-3" id="logs-container">
                                   <p class="text-sm text-slate-400 text-center py-8" data-i18n="loading_logs">Loading activity logs...</p>
                               </div>
+                              <div class="pt-2 border-t border-slate-200 dark:border-darkborder/50">
+                                  <button onclick="toggleConnectionReport()" class="w-full px-4 py-3 rounded-xl bg-primary/10 text-primary border border-primary/20 hover:bg-primary/15 font-bold text-sm transition-colors">📡 گزارش اتصال</button>
+                              </div>
+                              <div id="connection-report" class="hidden pt-4">
+                                  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-3">
+                                      <h4 class="font-black text-slate-700 dark:text-white">گزارش اتصال کاربران</h4>
+                                      <div class="flex gap-2">
+                                          <select id="connection-user-filter" onchange="loadConnectionLogs()" class="px-3 py-2 rounded-lg border border-slate-200 dark:border-darkborder bg-[var(--color-surface)] text-xs"></select>
+                                          <button onclick="loadConnectionLogs()" class="px-3 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold">🔄</button>
+                                      </div>
+                                  </div>
+                                  <div id="connection-logs-container" class="space-y-2"></div>
+                              </div>
                           </div>
                       </div>
 
-                      
-        <!-- CONNECTION LOGS VIEW -->
-<div id="view-conn-logs" class="hidden space-y-6">
-    <div class="bg-[var(--color-surface)]/70 backdrop-blur-xl rounded-3xl p-6 shadow-lg border border-white/20 dark:border-white/10 relative overflow-hidden">
-        <div class="flex items-center justify-between mb-6">
-            <h3 class="text-sm uppercase font-bold text-slate-500 tracking-wider" data-i18n="tab_conn_logs">Connection Logs</h3>
-            <button onclick="loadConnectionLogs()" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-bold transition-colors">
-                🔄 Refresh
-            </button>
-        </div>
-        <div class="space-y-2" id="conn-logs-container">
-            <p class="text-sm text-slate-400 text-center py-8" data-i18n="loading_conn_logs">Loading connection logs...</p>
-        </div>
-    </div>
-</div>
+                      <!-- Save Bar (Docked to bottom of main content) -->
+              <div class="shrink-0 bg-[var(--color-surface)]  border-t border-slate-200 dark:border-darkborder p-4 flex justify-between md:justify-end items-center z-20 mobile-save-bar">
+                  <span id="save-status" class="text-sm font-bold text-slate-500 md:me-4"></span>
+                  <button onclick="doSave()" class="native-press px-8 py-3 bg-primary text-white font-bold rounded-xl shadow-lg hover:opacity-90 transition-opacity" data-i18n="save_btn">Save Config</button>
+              </div>
+          </main>
+
+          <!-- BOTTOM NAV (Mobile) -->
+          <nav class="md:hidden w-full mobile-bottom-nav flex justify-around items-center z-30 shrink-0" style="height:calc(4rem + env(safe-area-inset-bottom, 0px));padding-bottom:env(safe-area-inset-bottom, 0px);">
+              <button onclick="switchTab('overview')" id="mob-tab-overview" class="mobile-tab-item mobile-nav-item active flex flex-col items-center justify-center w-full h-full text-slate-400">
+                  <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                  <span class="text-[10px] font-bold" data-i18n="tab_overview">Dashboard</span>
+              </button>
+              <button onclick="switchTab('info')" id="mob-tab-info" class="mobile-tab-item mobile-nav-item flex flex-col items-center justify-center w-full h-full text-slate-400">
+                  <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
+                  <span class="text-[10px] font-bold" data-i18n="tab_info">Endpoints</span>
+              </button>
+              <button onclick="switchTab('network')" id="mob-tab-network" class="mobile-tab-item mobile-nav-item flex flex-col items-center justify-center w-full h-full text-slate-400">
+                  <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                  <span class="text-[10px] font-bold" data-i18n="tab_status">Metrics</span>
+              </button>
+              <button onclick="switchTab('settings')" id="mob-tab-settings" class="mobile-tab-item mobile-nav-item flex flex-col items-center justify-center w-full h-full text-slate-400">
+                  <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                  <span class="text-[10px] font-bold" data-i18n="tab_settings">System</span>
+              </button>
+              <button onclick="switchTab('advanced')" id="mob-tab-advanced" class="mobile-tab-item mobile-nav-item flex flex-col items-center justify-center w-full h-full text-slate-400">
+                  <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                  <span class="text-[10px] font-bold" data-i18n="tab_adv">Advanced</span>
+              </button>
+              <button onclick="switchTab('logs')" id="mob-tab-logs" class="mobile-tab-item mobile-nav-item flex flex-col items-center justify-center w-full h-full text-slate-400">
+                  <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                  <span class="text-[10px] font-bold" data-i18n="tab_logs">Logs</span>
+              </button>
+              <button onclick="switchTab('users')" id="mob-tab-users" class="mobile-tab-item mobile-nav-item flex flex-col items-center justify-center w-full h-full text-slate-400">
+                  <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                  <span class="text-[10px] font-bold" data-i18n="tab_users">Clients</span>
+              </button>
+</nav>
+      </div>
+
+      <!-- Toast Notification -->
+      <div id="copy-toast" class="fixed top-20 md:top-10 left-1/2 -translate-x-1/2 bg-slate-800 dark:bg-[var(--color-surface)] text-white dark:text-slate-900 px-6 py-3 rounded-full shadow-2xl font-bold text-sm z-50 transition-all transform -translate-y-20 opacity-0 pointer-events-none">
+          <span data-i18n="copied">Copied!</span>
+      </div>
+      <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 px-5 py-3 text-white rounded-xl text-sm font-bold shadow-xl transition-opacity duration-300 pointer-events-none z-50 opacity-0"></div>
+
+      <!-- Confirm Modal -->
+      <div id="confirm-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] hidden items-center justify-center p-4">
+          <div class="bg-[var(--color-surface)] rounded-3xl p-8 max-w-sm w-full shadow-2xl border border-slate-200 dark:border-darkborder relative">
+              <div class="flex flex-col items-center text-center">
+                  <div class="w-16 h-16 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center mb-4">
+                      <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path></svg>
+                  </div>
+                  <h3 id="confirm-modal-title" class="text-lg font-bold text-slate-800 dark:text-white mb-2"></h3>
+                  <p id="confirm-modal-msg" class="text-sm text-slate-500 dark:text-slate-400 mb-6"></p>
+                  <div class="flex gap-3 w-full">
+                      <button onclick="confirmModalResolve(false)" class="flex-1 px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold text-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer">انصراف</button>
+                      <button onclick="confirmModalResolve(true)" class="flex-1 px-4 py-2.5 rounded-xl bg-red-500 text-white font-bold text-sm hover:bg-red-600 transition-colors cursor-pointer">تایید</button>
+                  </div>
+              </div>
+          </div>
+      </div>
 
       <!-- QR Code Modal (Enhanced) -->
       <div id="qr-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] hidden items-center justify-center p-4">
@@ -1903,12 +1851,7 @@ proxyip.cmliussss.net" class="w-full px-4 py-3 rounded-xl border border-slate-20
           const i18n = {
               en: {
                   title: "Nahan Gateway", pass_ph: "Master Key", login_btn: "Authenticate", err_pass: "Access Denied", missing_db: "⚠️ IOT_DB namespace missing! Settings won't save.", system_online: "System online",
-                  logout: "Disconnect", tab_overview: "Dashboard", tab_info: "Endpoints", tab_status: "Metrics", tab_settings: "System", tab_adv: "Advanced", tab_logs: "Logs", tab_help: "Help & FAQ", tab_conn_logs: "Connection Logs",
-loading_conn_logs: "Loading connection logs...",
-no_conn_logs: "No connection logs yet.",
-lbl_start_on_first_conn: "Start Countdown on First Connection",
-lbl_user_fingerprint: "Custom TLS Fingerprint",
-lbl_ad_block: "Block Internet Ads",
+                  logout: "Disconnect", tab_overview: "Dashboard", tab_info: "Endpoints", tab_status: "Metrics", tab_settings: "System", tab_adv: "Advanced", tab_logs: "Logs", tab_help: "Help & FAQ",
                   qr_title: "Direct Stream Link", badge_multi: "Dual-Core Multiplexed", copy: "Copy", copied: "Copied to clipboard!", sync_link: "Cloud Sync URL", active_id: "Hardware ID",
                   stat_ip: "Origin IP", stat_dc: "Edge Node", stat_loc: "Data Region",
                   lbl_proto: "Primary Display Mode", lbl_port: "Data Port", lbl_id: "Device UUID (Empty=Auto)",
@@ -1966,10 +1909,6 @@ lbl_ad_block: "Block Internet Ads",
                     format_obfuscated: "Obfuscated (UTF-8 + XOR)",
                      btn_redeploy_force: "Force Redeploy / Switch Format",
                     adv_network_dns: "Network & DNS", adv_proxy_relay: "Proxy & Relay", adv_subscription: "Subscription",
-                    adv_upstream_title: "Upstream VLESS", adv_upstream_badge: "Sing-Box / Clash",
-                    adv_upstream_desc1: "<strong>What does this do?</strong><br>It lets you use a free VLESS server (from sites like RaceVPN or SSHMax) so all your traffic goes through that server. Your exit IP becomes the server's IP.",
-                    adv_upstream_desc2: "<strong>Why is it useful?</strong><br>Sometimes you need an IP from a specific country (like Germany or USA) but don't want to buy a server. This lets you use that country's IP for free.",
-                    adv_upstream_desc3: "<strong>How to use?</strong><br>1. Get a VLESS link from one of the sites below<br>2. Paste it here<br>3. Click Save<br>4. Use the subscription link (Sing-Box or Clash format)",
                     adv_upstream_label: "VLESS Server Link", adv_upstream_hint: "Copy a VLESS link from one of these sites and paste it here:",
                     adv_upstream_providers: "Free VLESS Providers:", adv_upstream_warning: "Free configs usually expire after a few days. If the connection drops, get a new link and replace it. Also only works with Sing-Box and Clash formats.",
                     adv_routing_title: "Custom Routing", adv_routing_desc: "<strong>What does this do?</strong><br>Some sites or addresses you want to access directly without proxy. Add them here so their traffic goes through the normal path instead of the proxy.", adv_routing_label: "Custom Direct Routing", adv_routing_hint: "One domain, IP, geoip (e.g., geoip:ir) or geosite (e.g., geosite:ir) per line.", adv_routing_warning: "Wrong entries or bad formatting can break connections. Double check before saving.",
@@ -2009,12 +1948,7 @@ lbl_ad_block: "Block Internet Ads",
                },
               fa: {
                   title: "دروازه نهان", pass_ph: "کلید اصلی", login_btn: "ورود به سیستم", err_pass: "دسترسی مسدود شد", missing_db: "⚠️ فضای پایگاه داده یافت نشد! تنظیمات ذخیره نمی‌شوند.", system_online: "سیستم فعال است",
-                  logout: "خروج", tab_overview: "نمای کلی", tab_info: "نودها", tab_status: "شبکه", tab_settings: "تنظیمات", tab_adv: "پیشرفته", tab_logs: "گزارش فعالیت", tab_help: "راهنما و سوالات", tab_conn_logs: "گزارش اتصال",
-loading_conn_logs: "در حال بارگذاری گزارش اتصالات...",
-no_conn_logs: "هنوز گزارش اتصالی ثبت نشده.",
-lbl_start_on_first_conn: "شروع محاسبه زمان از اولین اتصال",
-lbl_user_fingerprint: "فینگرپرینت TLS اختصاصی",
-lbl_ad_block: "مسدودسازی تبلیغات اینترنتی",
+                  logout: "خروج", tab_overview: "نمای کلی", tab_info: "نودها", tab_status: "شبکه", tab_settings: "تنظیمات", tab_adv: "پیشرفته", tab_logs: "گزارش فعالیت", tab_help: "راهنما و سوالات",
                   qr_title: "لینک اتصال مستقیم", badge_multi: "ترکیب ترانزیت پیشرفته دوگانه", copy: "کپی", copied: "در حافظه کپی شد!", sync_link: "لینک ساب (همگام سازی ابری)", active_id: "شناسه سخت‌افزار",
                   stat_ip: "آی‌پی مبدا", stat_dc: "گره لبه", stat_loc: "منطقه داده",
                   lbl_proto: "پروتکل نمایش مستقیم", lbl_port: "پورت داده", lbl_id: "شناسه یکتا (خالی=خودکار)",
@@ -2044,10 +1978,6 @@ lbl_ad_block: "مسدودسازی تبلیغات اینترنتی",
                     format_obfuscated: "مبهم‌سازی شده (UTF-8 + XOR)",
                     btn_redeploy_force: "تفویض مجدد / تغییر قالب پنل",
                     adv_network_dns: "شبکه و DNS", adv_proxy_relay: "پروکسی و رله", adv_subscription: "اشتراک",
-                    adv_upstream_title: "آپ‌استریم VLESS", adv_upstream_badge: "Sing-Box / Clash",
-                    adv_upstream_desc1: "<strong>این بخش چیکار میکنه؟</strong><br>یه سرور رایگان VLESS (مثلاً از سایت‌هایی مثل RaceVPN یا SSHMax) به پنل معرفی می‌کنی تا تمام ترافیکت از اون سوراخ رد بشه. یعنی IP خروجیت میشه IP اون سرور.",
-                    adv_upstream_desc2: "<strong>چرا لازمه؟</strong><br>بعضی وقتا به IP یه کشور خاص (مثلاً آلمان یا آمریکا) نیاز داری ولی نمی‌خوای سرور بخری. با این بخش می‌تونی رایگان از IP اون کشور استفاده کنی.",
-                    adv_upstream_desc3: "<strong>چطوری استفاده کنم؟</strong><br>۱. از یکی از سایت‌های زیر یه لینک VLESS بگیر<br>۲. لینک رو اینجا paste کن<br>۳. Save کن<br>۴. از لینک سابسکریپشن (فرمت Sing-Box یا Clash) استفاده کن",
                     adv_upstream_label: "لینک سرور VLESS", adv_upstream_hint: "لینک VLESS رو از سایت‌های زیر کپی کن و اینجا بذار:",
                     adv_upstream_providers: "سایت‌های دریافت لینک رایگان:", adv_upstream_warning: "کانفیگ‌های رایگان معمولاً چند روز بیشتر دوام ندارن. اگه اتصال قطع شد، لینک جدید بگیر و جایگزین کن. همچنین فقط با فرمت‌های Sing-Box و Clash کار می‌کنه.",
                     adv_routing_title: "مسیریابی سفارشی", adv_routing_desc: "<strong>این بخش چیکار میکنه؟</strong><br>بعضی سایت‌ها یا آدرس‌ها رو می‌خوای بدون پروکسی باز کنی (مستقیم وصل بشی). اینجا آدرس‌ها رو بنویس تا ترافیکشون از مسیر عادی رد بشه.", adv_routing_label: "مسیریابی مستقیم سفارشی", adv_routing_hint: "هر خط یه آدرس، IP، geoip (مثلاً geoip:ir) یا geosite (مثلاً geosite:ir) باشه.", adv_routing_warning: "اگه آدرس اشتباه بنویسی یا فرمت درست نباشه، اتصال قطع میشه. قبل از ذخیره حتماً چک کن.",
@@ -2599,7 +2529,7 @@ lbl_ad_block: "مسدودسازی تبلیغات اینترنتی",
           let dashboardInterval = null;
           let networkInterval = null;
           function switchTab(tab) {
-            ['overview','info','network','settings','advanced','logs','users','conn-logs'].forEach(t => {                 
+            ['overview','info','network','settings','advanced','logs','users'].forEach(t => {
                   const view = document.getElementById('view-'+t);
                   const deskBtn = document.getElementById('tab-'+t);
                   const mobBtn = document.getElementById('mob-tab-'+t);
@@ -2631,37 +2561,43 @@ lbl_ad_block: "مسدودسازی تبلیغات اینترنتی",
                 loadDashboard();
                 dashboardInterval = setInterval(loadDashboard, 15000);
             }
-             if(tab === 'logs') loadLogs();
-            if(tab === 'conn-logs') loadConnectionLogs();
+            if(tab === 'logs') loadLogs();
             if(tab === 'network') {
                 doLogin(true);
                 networkInterval = setInterval(()=>doLogin(true), 15000);
             }
           }
 
-        function toggleFAQ(button) {
-            const content = button.nextElementSibling;
-            const svg = button.querySelector('svg');
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                svg.classList.add('rotate-180');
-            } else {
-                content.classList.add('hidden');
-                svg.classList.remove('rotate-180');
+        async function toggleConnectionReport() {
+            const box = document.getElementById('connection-report');
+            if (!box) return;
+            box.classList.toggle('hidden');
+            if (!box.classList.contains('hidden')) {
+                const sel = document.getElementById('connection-user-filter');
+                if (sel && sel.options.length === 0) {
+                    sel.innerHTML = '<option value="">همه کاربران</option>' + ((window.nahanConfig?.users || []).map(u => `<option value="${u.id}">${u.name}</option>`).join(''));
+                }
+                loadConnectionLogs();
             }
         }
 
-        function filterFAQs() {
-            const query = document.getElementById('faq-search').value.toLowerCase();
-            const items = document.querySelectorAll('.faq-item');
-            items.forEach(item => {
-                const text = item.textContent.toLowerCase();
-                if (text.includes(query)) {
-                    item.classList.remove('hidden');
-                } else {
-                    item.classList.add('hidden');
-                }
-            });
+        async function loadConnectionLogs() {
+            const container = document.getElementById('connection-logs-container');
+            if (!container) return;
+            container.innerHTML = '<p class="text-xs text-slate-400 text-center py-4">در حال دریافت گزارش اتصال...</p>';
+            try {
+                const userId = document.getElementById('connection-user-filter')?.value || '';
+                const res = await fetch(baseRoute + '/api/connections', {method:'POST', body:JSON.stringify({key:sessionKey,userId,limit:300})});
+                const data = await res.json();
+                if (!data.success) throw new Error('failed');
+                if (!data.logs.length) { container.innerHTML='<p class="text-xs text-slate-400 text-center py-4">گزارش اتصالی ثبت نشده است.</p>'; return; }
+                container.innerHTML = data.logs.map(x => {
+                    const start = new Date(x.startedAt).toLocaleString('fa-IR');
+                    const end = x.endedAt ? new Date(x.endedAt).toLocaleString('fa-IR') : 'هنوز متصل است';
+                    const dur = x.durationMs ? Math.round(x.durationMs/1000) + ' ثانیه' : '—';
+                    return `<div class="p-3 rounded-xl border border-slate-200 dark:border-darkborder bg-slate-50 dark:bg-slate-800/40"><div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2"><b class="text-sm">${x.userName || x.userId}</b><span class="text-[10px] font-mono text-slate-400">${dur}</span></div><div class="grid grid-cols-1 md:grid-cols-2 gap-1 mt-2 text-[11px] text-slate-500"><span>🟢 وصل: ${start}</span><span>🔴 قطع: ${end}</span></div></div>`;
+                }).join('');
+            } catch(e) { container.innerHTML='<p class="text-xs text-red-400 text-center py-4">خطا در دریافت گزارش اتصال.</p>'; }
         }
 
         async function loadLogs() {
@@ -2690,54 +2626,6 @@ lbl_ad_block: "مسدودسازی تبلیغات اینترنتی",
             }
         }
 
-        async function loadConnectionLogs() {
-    const container = document.getElementById('conn-logs-container');
-    if (!container) return;
-    container.innerHTML = '<p class="text-sm text-slate-400 text-center py-4">' + (i18n[lang]?.loading_conn_logs || 'Loading...') + '</p>';
-    try {
-        const res = await fetch(baseRoute + '/api/conn_logs', {
-            method: 'GET',
-            headers: { 'Authorization': 'Bearer ' + sessionKey }
-        });
-        const data = await res.json();
-        if (data.success && data.logs) {
-            if (data.logs.length === 0) {
-                container.innerHTML = '<p class="text-sm text-slate-400 text-center py-4">' + (i18n[lang]?.no_conn_logs || 'No connection logs yet.') + '</p>';
-                return;
-            }
-            let html = '';
-            data.logs.forEach(log => {
-                const dateStr = new Date(log.ts).toLocaleString('en-US', { hour12: false });
-                const isConnect = log.event === 'connect';
-                const icon = isConnect ? '🟢' : '🔴';
-                const eventTxt = isConnect 
-                    ? (lang === 'fa' ? 'اتصال' : 'Connected') 
-                    : (lang === 'fa' ? 'قطع' : 'Disconnected');
-                const bgClass = isConnect 
-                    ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-200 dark:border-emerald-900/30' 
-                    : 'bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-900/30';
-                const txtClass = isConnect 
-                    ? 'text-emerald-600 dark:text-emerald-400' 
-                    : 'text-red-600 dark:text-red-400';
-                html += '<div class="flex items-center justify-between p-3 rounded-xl border ' + bgClass + ' gap-2">' +
-                    '<div class="flex items-center gap-3 min-w-0 flex-1">' +
-                        '<span class="text-lg shrink-0">' + icon + '</span>' +
-                        '<div class="min-w-0">' +
-                            '<p class="text-sm font-bold text-slate-700 dark:text-slate-200 truncate">' + log.userName + '</p>' +
-                            '<p class="text-[11px] ' + txtClass + ' font-semibold">' + eventTxt + '</p>' +
-                        '</div>' +
-                    '</div>' +
-                    '<span class="text-[10px] font-mono text-slate-400 bg-[var(--color-surface)] px-2 py-1 rounded shrink-0">' + dateStr + '</span>' +
-                '</div>';
-            });
-            container.innerHTML = html;
-        } else {
-            container.innerHTML = '<p class="text-sm text-red-400 text-center py-4">Failed to load logs.</p>';
-        }
-    } catch (err) {
-        container.innerHTML = '<p class="text-sm text-red-400 text-center py-4">Error loading logs.</p>';
-    }
-}
         async function loadDashboard() {
             try {
                 const [statsRes, logsRes] = await Promise.all([
@@ -2759,28 +2647,6 @@ lbl_ad_block: "مسدودسازی تبلیغات اینترنتی",
                     document.getElementById('ov-today-traffic').textContent = s.traffic.dailyGB + ' ' + (i18n[lang]?.ov_gb_unit || 'GB');
                     document.getElementById('ov-today-reqs').textContent = s.traffic.dailyRequests.toLocaleString();
                     document.getElementById('ov-active-conns').textContent = s.system.activeConnections;
-                    
-                                        // Per-user active connections
-                    const activeConnsContainer = document.getElementById('ov-active-conns-detail');
-                    if (activeConnsContainer && s.system.activeConnsPerUser) {
-                        let connsHtml = '';
-                        const entries = Object.entries(s.system.activeConnsPerUser).filter(([k, v]) => v > 0);
-                        if (entries.length === 0) {
-                            connsHtml = '<p class="text-xs text-slate-400 text-center py-2">' + (i18n[lang]?.no_active_conn || 'No active connections') + '</p>';
-                        } else {
-                            entries.forEach(([uuid, count]) => {
-                                const user = (window.nahanConfig?.users || []).find(u => 
-                                    u.id.replace(/-/g, '').toLowerCase() === uuid
-                                );
-                                const name = user ? user.name : uuid.substring(0, 8);
-                                connsHtml += '<div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-slate-50 dark:bg-slate-800/50">' +
-                                    '<span class="text-xs font-bold text-slate-700 dark:text-slate-200">' + name + '</span>' +
-                                    '<span class="text-xs font-mono text-emerald-500 font-bold">' + count + '</span>' +
-                                '</div>';
-                            });
-                        }
-                        activeConnsContainer.innerHTML = connsHtml;
-                    }
                     
                     document.getElementById('ov-version').textContent = 'v' + s.system.version;
                     
@@ -3045,7 +2911,7 @@ lbl_ad_block: "مسدودسازی تبلیغات اینترنتی",
               const payload = {
                   mode: el('cfg-proto').value, socketPorts: Array.from(el('cfg-port').selectedOptions).map(o=>o.value).join(','), deviceId: el('cfg-uuid').value,
                   apiRoute: el('cfg-path').value, masterKey: el('cfg-pass').value, agent: el('cfg-fp').value,
-                   resolveIp: el('cfg-dns').value, customDns: el('cfg-custom-dns').value ? el('cfg-custom-dns').value : 'https://cloudflare-dns.com/dns-query', cleanIps: el('cfg-ips').value, maintenanceHost: el('cfg-fake') ? el('cfg-fake').value : '', backupRelay: el('cfg-relay').value, customRouting: el('cfg-custom-routing') ? el('cfg-custom-routing').value : '', upstreamUri: el('cfg-upstream') ? el('cfg-upstream').value.trim() : '', nat64Prefix: el('cfg-nat64') ? el('cfg-nat64').value : '', enableDirectConfigs: el('cfg-direct-configs') ? el('cfg-direct-configs').checked : false, syncApiKey: el('cf...ey') ? el('cfg-sync-api-key').value.trim() : '', autoUpdate: el('cfg-auto-update') ? el('cfg-auto-update').checked : false, autoUpdateFormat: document.querySelector('input[name="auto-update-format"]:checked')?.value || 'normal',
+                   resolveIp: el('cfg-dns').value, customDns: el('cfg-custom-dns').value ? el('cfg-custom-dns').value : 'https://cloudflare-dns.com/dns-query', cleanIps: el('cfg-ips').value, maintenanceHost: el('cfg-fake') ? el('cfg-fake').value : '', backupRelay: el('cfg-relay').value, customRouting: el('cfg-custom-routing') ? el('cfg-custom-routing').value : '', nat64Prefix: el('cfg-nat64') ? el('cfg-nat64').value : '', enableDirectConfigs: el('cfg-direct-configs') ? el('cfg-direct-configs').checked : false, syncApiKey: el('cf...ey') ? el('cfg-sync-api-key').value.trim() : '', autoUpdate: el('cfg-auto-update') ? el('cfg-auto-update').checked : false, autoUpdateFormat: document.querySelector('input[name="auto-update-format"]:checked')?.value || 'normal',
                    enableOpt1: el('cfg-tfo').checked, enableOpt2: el('cfg-ech').checked,
                    tgToken: el('cfg-tg-token').value, tgChatId: el('cfg-tg-chat').value, tgAdminId: el('cfg-tg-admin').value,
                   cfAccountId: el('cfg-cf-acc').value, cfApiToken: el('cfg-cf-token').value,
@@ -3088,7 +2954,6 @@ lbl_ad_block: "مسدودسازی تبلیغات اینترنتی",
                       mapId('cfg-fake', conf.maintenanceHost);
                       mapId('cfg-relay', 'cfg-custom-routing', conf.backupRelay);
                       mapId('cfg-custom-routing', conf.customRouting);
-                      if(document.getElementById('cfg-upstream')) document.getElementById('cfg-upstream').value = conf.upstreamUri || '';
 
                       mapId('cfg-tg-token', conf.tgToken);
                       mapId('cfg-tg-chat', conf.tgChatId);
@@ -3236,7 +3101,6 @@ lbl_ad_block: "مسدودسازی تبلیغات اینترنتی",
                       document.getElementById('cfg-custom-dns').value = conf.customDns || 'https://cloudflare-dns.com/dns-query';
                       document.getElementById('cfg-ips').value = conf.cleanIps || '';
                       if(document.getElementById('cfg-custom-routing')) document.getElementById('cfg-custom-routing').value = conf.customRouting || '';
-                      if(document.getElementById('cfg-upstream')) document.getElementById('cfg-upstream').value = conf.upstreamUri || '';
 
                       if (document.getElementById('cfg-fake')) document.getElementById('cfg-fake').value = conf.maintenanceHost || '';
                        document.getElementById('cfg-relay').value = conf.backupRelay || '';
@@ -3376,7 +3240,7 @@ lbl_ad_block: "مسدودسازی تبلیغات اینترنتی",
                   config: {
                       mode: el('cfg-proto').value, socketPorts: Array.from(el('cfg-port').selectedOptions).map(o=>o.value).join(','), deviceId: el('cfg-uuid').value,
                       apiRoute: el('cfg-path').value, masterKey: el('cfg-pass').value, agent: el('cfg-fp').value,
-                      resolveIp: el('cfg-dns').value, customDns: el('cfg-custom-dns') ? el('cfg-custom-dns').value : 'https://cloudflare-dns.com/dns-query', cleanIps: el('cfg-ips').value, maintenanceHost: el('cfg-fake') ? el('cfg-fake').value : '', backupRelay: el('cfg-relay').value, customRouting: el('cfg-custom-routing') ? el('cfg-custom-routing').value : '', upstreamUri: el('cfg-upstream') ? el('cfg-upstream').value.trim() : '', nat64Prefix: el('cfg-nat64') ? el('cfg-nat64').value : '', enableDirectConfigs: el('cfg-direct-configs') ? el('cfg-direct-configs').checked : false, syncApiKey: el('cfg-sync-api-key') ? el('cfg-sync-api-key').value.trim() : '', autoUpdate: el('cfg-auto-update') ? el('cfg-auto-update').checked : false, autoUpdateFormat: document.querySelector('input[name="auto-update-format"]:checked')?.value || 'normal',
+                      resolveIp: el('cfg-dns').value, customDns: el('cfg-custom-dns') ? el('cfg-custom-dns').value : 'https://cloudflare-dns.com/dns-query', cleanIps: el('cfg-ips').value, maintenanceHost: el('cfg-fake') ? el('cfg-fake').value : '', backupRelay: el('cfg-relay').value, customRouting: el('cfg-custom-routing') ? el('cfg-custom-routing').value : '', nat64Prefix: el('cfg-nat64') ? el('cfg-nat64').value : '', enableDirectConfigs: el('cfg-direct-configs') ? el('cfg-direct-configs').checked : false, syncApiKey: el('cfg-sync-api-key') ? el('cfg-sync-api-key').value.trim() : '', autoUpdate: el('cfg-auto-update') ? el('cfg-auto-update').checked : false, autoUpdateFormat: document.querySelector('input[name="auto-update-format"]:checked')?.value || 'normal',
                                             enableOpt1: el('cfg-tfo').checked, enableOpt2: el('cfg-ech').checked,
                                             tgToken: el('cfg-tg-token').value, tgChatId: el('cfg-tg-chat').value, tgAdminId: el('cfg-tg-admin').value,
                                             cfAccountId: el('cfg-cf-acc').value, cfApiToken: el('cfg-cf-token').value,
@@ -3669,9 +3533,6 @@ lbl_ad_block: "مسدودسازی تبلیغات اینترنتی",
                           ${u.userPorts ? `<span class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-300">${u.userPorts}</span>` : ''}
                            ${u.maxConfigs ? `<span class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-300">${u.maxConfigs} cfgs</span>` : ''}
                            ${u.connLimit ? `<span class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-300">${u.connLimit} conn</span>` : ''}
-                            ${u.adBlock ? `<span class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-300">AdBlock</span>` : ''}
-                           ${u.userFingerprint ? `<span class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">${u.userFingerprint}</span>` : ''}
-                           ${u.startOnFirstConn ? `<span class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-300">On 1st Conn</span>` : ''}
                       </div>
                       ${disableInfoHtml}
                       <!-- Traffic Cards -->
@@ -4064,24 +3925,17 @@ function buildPortCheckboxes(wrapId, selectedPorts) {
                days = days ? parseInt(days) : null;
                let connLimit = document.getElementById('add-user-conn-limit').value;
                connLimit = connLimit ? parseInt(connLimit) : null;
-                              const userPanelUrl = document.getElementById('add-user-panel-url').value.trim() || null;
+               const userPanelUrl = document.getElementById('add-user-panel-url').value.trim() || null;
 
                let newId = Array.from(crypto.getRandomValues(new Uint8Array(16)))
                    .map((b,i) => (i===4||i===6||i===8||i===10?'-':'') + b.toString(16).padStart(2,'0')).join('');
-
-                const userFingerprint = document.getElementById('add-user-fingerprint').value || null;
-                const adBlock = document.getElementById('add-user-adblock').checked;
-                const startOnFirstConn = document.getElementById('add-user-start-on-first-conn').checked;
 
                 const u = {
                     id: newId,
                     name: name,
                     limitTotalReq: tReq,
                     limitDailyReq: dReq,
-                    expiryMs: startOnFirstConn ? null : (days ? Date.now() + days*86400000 : null),
-                    pendingExpiryDays: startOnFirstConn ? days : null,
-                    startOnFirstConn: startOnFirstConn,
-                    firstConnectionAt: null,
+                    expiryMs: days && !document.getElementById('add-user-start-on-connect')?.checked ? Date.now() + days*86400000 : null,
                     proxyIp: proxyIp,
                      cleanIp: cleanIp,
                      customName: customName,
@@ -4092,8 +3946,12 @@ function buildPortCheckboxes(wrapId, selectedPorts) {
                      nat64: nat64,
                      connLimit: connLimit,
                      userPanelUrl: userPanelUrl,
-                     userFingerprint: userFingerprint,
-                     adBlock: adBlock,
+                     expiryDays: days,
+                     expiryStartsOnFirstConnection: document.getElementById('add-user-start-on-connect')?.checked || false,
+                     tlsFingerprint: document.getElementById('add-user-tls-fingerprint')?.value || null,
+                     blockAds: document.getElementById('add-user-block-ads')?.checked || false,
+                     autoIpRotation: document.getElementById('add-user-auto-ip')?.checked || false,
+                     fragmentEnabled: document.getElementById('add-user-fragment')?.checked || false,
                      createdAt: Date.now()
                 };
 
@@ -4117,6 +3975,8 @@ function buildPortCheckboxes(wrapId, selectedPorts) {
               document.getElementById('add-user-days').value = '';
               document.getElementById('add-user-max-configs').value = '';
               document.getElementById('add-user-conn-limit').value = '';
+              ['add-user-start-on-connect','add-user-block-ads','add-user-auto-ip','add-user-fragment'].forEach(id=>{const e=document.getElementById(id);if(e)e.checked=false;});
+              if(document.getElementById('add-user-tls-fingerprint')) document.getElementById('add-user-tls-fingerprint').value='';
               document.getElementById('add-user-panel-url').value = '';
 
               renderUsersTable();
@@ -4183,9 +4043,11 @@ function buildPortCheckboxes(wrapId, selectedPorts) {
               document.getElementById('edit-user-max-configs').value = u.maxConfigs || '';
               document.getElementById('edit-user-conn-limit').value = u.connLimit || '';
               document.getElementById('edit-user-panel-url').value = u.userPanelUrl || '';
-              document.getElementById('edit-user-fingerprint').value = u.userFingerprint || '';
-              document.getElementById('edit-user-adblock').checked = u.adBlock || false;
-              document.getElementById('edit-user-start-on-first-conn').checked = u.startOnFirstConn || false;
+              document.getElementById('edit-user-start-on-connect').checked = !!u.expiryStartsOnFirstConnection;
+              document.getElementById('edit-user-tls-fingerprint').value = u.tlsFingerprint || '';
+              document.getElementById('edit-user-block-ads').checked = !!u.blockAds;
+              document.getElementById('edit-user-auto-ip').checked = !!u.autoIpRotation;
+              document.getElementById('edit-user-fragment').checked = !!u.fragmentEnabled;
 
               buildPortCheckboxes('edit-user-ports-wrap', u.userPorts);
               buildModeCheckboxes('edit-user-mode-wrap', u.userMode);
@@ -4252,10 +4114,7 @@ function buildPortCheckboxes(wrapId, selectedPorts) {
                 const nat64 = document.getElementById('edit-user-nat64').value.trim() || null;
                 let connLimit = document.getElementById('edit-user-conn-limit').value;
                 connLimit = connLimit ? parseInt(connLimit) : null;
-                 const userPanelUrl = document.getElementById('edit-user-panel-url').value.trim() || null;
-                const userFingerprint = document.getElementById('edit-user-fingerprint').value || null;
-                const adBlock = document.getElementById('edit-user-adblock').checked;
-                const startOnFirstConn = document.getElementById('edit-user-start-on-first-conn').checked;
+                const userPanelUrl = document.getElementById('edit-user-panel-url').value.trim() || null;
 
                if(!name) {
                   alert(lang === 'fa' ? 'لطفاً نام را وارد کنید' : 'Please enter a name');
@@ -4275,20 +4134,16 @@ function buildPortCheckboxes(wrapId, selectedPorts) {
               let u = window.nahanConfig.users.find(usr => usr.id === uuid);
               if(!u) return;
 
-                            u.name = name;
+              u.name = name;
               u.limitTotalReq = tReq;
               u.limitDailyReq = dReq;
-              if (startOnFirstConn) {
-                  if (!u.startOnFirstConn || !u.firstConnectionAt) {
-                      u.expiryMs = null;
-                      u.pendingExpiryDays = days;
-                  }
-                  u.startOnFirstConn = true;
-              } else {
-                  u.startOnFirstConn = false;
-                  u.pendingExpiryDays = null;
-                  u.expiryMs = days ? Date.now() + days*86400000 : null;
-              }
+              u.expiryStartsOnFirstConnection = document.getElementById('edit-user-start-on-connect').checked;
+              u.expiryDays = days;
+              u.expiryMs = days && !u.expiryStartsOnFirstConnection ? Date.now() + days*86400000 : (u.firstConnectedAt && days ? u.firstConnectedAt + days*86400000 : null);
+              u.tlsFingerprint = document.getElementById('edit-user-tls-fingerprint').value || null;
+              u.blockAds = document.getElementById('edit-user-block-ads').checked;
+              u.autoIpRotation = document.getElementById('edit-user-auto-ip').checked;
+              u.fragmentEnabled = document.getElementById('edit-user-fragment').checked;
               u.proxyIp = proxyIp;
                u.cleanIp = cleanIp;
                u.customName = customName;
@@ -4299,8 +4154,6 @@ function buildPortCheckboxes(wrapId, selectedPorts) {
               u.nat64 = nat64;
               u.connLimit = connLimit;
               u.userPanelUrl = userPanelUrl;
-              u.userFingerprint = userFingerprint;
-              u.adBlock = adBlock;
 
               document.getElementById('view-edit-user').classList.add('hidden');
               document.getElementById('view-users').classList.remove('hidden');
@@ -4919,4 +4772,11 @@ function buildPortCheckboxes(wrapId, selectedPorts) {
   });
 </script>
 </body>
-</html>
+</html>                                           <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+                                               <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-darkborder bg-[var(--color-surface)]"><span><b class="text-xs">شروع اعتبار از اولین اتصال</b><small class="block text-[10px] text-slate-400">اعتبار تا اولین اتصال شروع نمی‌شود</small></span><input id="edit-user-start-on-connect" type="checkbox" class="w-4 h-4"></label>
+                                               <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-darkborder bg-[var(--color-surface)]"><span><b class="text-xs">Fingerprint اختصاصی TLS</b><small class="block text-[10px] text-slate-400">خالی = مقدار عمومی پنل</small></span><select id="edit-user-tls-fingerprint" class="w-32 px-2 py-2 rounded-lg border border-slate-200 dark:border-darkborder bg-[var(--color-surface)] text-xs"><option value="">پیش‌فرض پنل</option><option value="chrome">Chrome</option><option value="firefox">Firefox</option><option value="safari">Safari</option><option value="edge">Edge</option><option value="randomized">Randomized</option></select></label>
+                                               <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-darkborder bg-[var(--color-surface)]"><span><b class="text-xs">مسدودسازی تبلیغات</b><small class="block text-[10px] text-slate-400">DNS Ad-Block برای خروجی‌های پشتیبانی‌شده</small></span><input id="edit-user-block-ads" type="checkbox" class="w-4 h-4"></label>
+                                               <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-darkborder bg-[var(--color-surface)]"><span><b class="text-xs">تعویض خودکار IP</b><small class="block text-[10px] text-slate-400">چرخش بین IPهای تعریف‌شده کاربر</small></span><input id="edit-user-auto-ip" type="checkbox" class="w-4 h-4"></label>
+                                               <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-darkborder bg-[var(--color-surface)] md:col-span-2"><span><b class="text-xs">Fragment</b><small class="block text-[10px] text-slate-400">فقط در کلاینت‌هایی که از این گزینه پشتیبانی می‌کنند اعمال می‌شود</small></span><input id="edit-user-fragment" type="checkbox" class="w-4 h-4"></label>
+                                           </div>
+
